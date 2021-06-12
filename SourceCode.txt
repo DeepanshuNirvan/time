@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<title>Time Zone</title>
+</head>
+
+<body bgcolor="#9FC1D3">
+    <center>
+        <font face="comic sans ms" size="28" coloR="black">Time In Different Time Zones</font>
+        <hr size="3">
+        <br>
+        <font size="10" face="rockwell" color="red">
+            <div class="container" id="IndiaTime">The time in IST will be shown here</div>
+        </font>
+    </center>
+    <br><br>
+    <h2>-------CHOOSE ANY TIMEZONE:-------</h2>
+    <font size="5" face="bookman old style" colour="violet">
+        <input type="radio" name="tzone" id="ant">Antarctica Standard Time <br>s
+        <input type="radio" name="tzone" id="bct">Belgium Central Time<br>
+        <input type="radio" name="tzone" id="pct">Pakistan Central Time<br>
+        <input type="radio" name="tzone" id="cmt">China Mean Time<br>
+        <input type="radio" name="tzone" id="jst">Japan Standard Time<br>
+        <input type="radio" name="tzone" id="act">Australian Central Time<br>
+        <input type="radio" name="tzone" id="ast">Africa Standard Time<br>
+        <input type="radio" name="tzone" id="amt">America Mean Time<br>
+    </font>
+    <br>
+    <center><button border='2' id="show" onclick="show()" >SHOW</button>
+        <button id="another" onclick="another()">Want to Select Another Zone</button>
+        <br><br>
+        <font size="10" face="rockwell" color="red">
+            <div class="container" id="zone">Time in Selected zone will be shown here</div>
+        </font>
+    </center><br><br><br>
+    <h3><a target="blank" href="mailto:ddnirvan@gmail.com">CONTACT ME</a></h3>
+
+    <script>
+        function another() {
+            document.location.reload();
+        }
+
+        function show() {
+
+            if (document.getElementById('ant').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Antarctica/McMurdo", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+            }
+
+            if (document.getElementById('bct').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Europe/Brussels", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+            }
+            if (document.getElementById('pct').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Asia/Karachi", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+
+            }
+
+            if (document.getElementById('cmt').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Asia/Shanghai", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+
+            }
+            if (document.getElementById('jst').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+
+            }
+            if (document.getElementById('act').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Australia/Sydney", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+
+            }
+            if (document.getElementById('ast').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "Africa/Ceuta", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+
+            }
+            if (document.getElementById('amt').checked) {
+                setInterval(() => {
+                    document.getElementById("IndiaTime").innerHTML = new Date().toLocaleString("en-US", { timezone: 'Asia/Kolkata', timestyle: 'medium', hourCycle: "h24" });
+                    document.getElementById("zone").innerHTML = new Date().toLocaleString("en-US", { timeZone: "America/New_York", timestyle: 'medium', hourCycle: "h24" });
+                }, 1000);
+                document.getElementById("show").disabled = true;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
